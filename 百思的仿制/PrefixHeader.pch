@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  百思的仿制
+//
+//  Created by 张精申 on 16/5/18.
+//  Copyright © 2016年 张精申. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+
+
+#ifdef  DEBUG
+#define MYLog(...)   NSLog(__VA_ARGS__)
+#else
+#define MYLog(...)
+#endif
+
+#define Color(r,g,b,a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define GolbalColor Color(223,223,223,1.0)
+#define RandomColor Color(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255),1.0)
+
+#endif /* PrefixHeader_pch */
